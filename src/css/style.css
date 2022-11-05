@@ -1,0 +1,45 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    gap: 2rem;
+    background-color:indianred;
+    color: rgba(255, 255, 255, 0.905);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.logo{
+    box-shadow: rgba(0, 0, 0, 0.251) 0px 3px 12px;
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+}
+.form{
+    padding: 3rem;
+    display: grid;
+    
+    gap: 1rem;
+    grid-template: 40px 40px/ 1fr 1fr ;
+
+}
+.formInput{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+}
+.formButton{
+    background-color:indianred;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-column: 1/-1;
+}
