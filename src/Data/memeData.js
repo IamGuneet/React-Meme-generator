@@ -1,7 +1,5 @@
 export default function Data() {
     return{
-
-    
     "success": true,
     "data": {
         "memes": [

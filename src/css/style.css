@@ -24,7 +24,8 @@ body{
 .form{
     padding: 3rem;
     display: grid;
-    
+    /* justify-content: center;
+    a */
     gap: 1rem;
     grid-template: 40px 40px/ 1fr 1fr ;
 
@@ -50,4 +51,16 @@ footer{
     text-align: right;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+.memeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.memeImg{
+    max-width: 550px;
+    max-height: 550px;
+    min-height: 100px;
+    min-width: 100px;   
 }
