@@ -1,10 +1,18 @@
-import Logo from "../imgs/Albert.png"
+import Albert from "../imgs/Albert.png"
+import React from "react"
+import hehe from "../imgs/hehehe.png"
 
+export default function Navbar() {
+    
+    const [url,setUrl] = React.useState(true)
 
-export default function navbar() {
+        function ChangeUrl(){
+            setUrl((preValue)=> !preValue)
+        }
+
     return (
         <div className="navbar">
-            <img src={Logo} alt="Img" className="logo"/>
+            <img onClick={ChangeUrl} src={url? Albert:hehe} alt="Img" className="logo"/>
             <h1>Meme Generator</h1>
         
         </div>

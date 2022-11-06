@@ -1,18 +1,27 @@
+import dataObj from "../Data/memeData"
 
-export default function form() {
+
+export default function Form() {
+    const memeFunc = dataObj()
+    const memeArray = memeFunc.data.memes 
+
+    function check(){
+        console.log(memeArray);
+    }
     return (
         <div >
-            <form className="form">
+            <div className="form">
                 <input className="formInput" 
                 type="text"
+                placeholder="text"
 
                 />
                 <input  className="formInput"
                 type="text"
-
+                placeholder="text"
                 />
-                <button className="formButton">Get a new Meme</button>
-            </form>
+                <button onClick={check} className="formButton">Get a new Meme</button>
+            </div>
         </div>
     )
     

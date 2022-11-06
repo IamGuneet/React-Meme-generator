@@ -15,8 +15,8 @@ body{
 }
 .logo{
     box-shadow: rgba(0, 0, 0, 0.251) 0px 3px 12px;
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 100px;
+    max-width: 100px;
     min-width: 30px;
     min-height: 30px;
     border-radius: 50%;
@@ -42,4 +42,12 @@ body{
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     grid-column: 1/-1;
+}
+footer{
+    margin-top: auto;
+    height: 2rem;
+    padding: 2rem;
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
