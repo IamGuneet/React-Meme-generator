@@ -63,4 +63,22 @@ footer{
     max-height: 550px;
     min-height: 100px;
     min-width: 100px;   
+    /* position: absolute; */
+}
+.memeContainer{
+    position: relative;
+}
+.meme-topText{
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+}
+.meme-bottomText{
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
 }

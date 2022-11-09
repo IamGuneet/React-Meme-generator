@@ -4,7 +4,7 @@ import React from "react"
 export default function Form() {
 
     const [formData,setFormData] = React.useState(
-        {firstname:"",lastName:""}
+        {firstName:"",lastName:""}
     );
     console.log(formData);
     
@@ -31,25 +31,36 @@ export default function Form() {
     }
 
     return (
+        
         <div className="memeDiv" >
+
             <div className="form">
+
                 <input className="formInput" 
                 type="text"
                 onChange={handleChange}
                 placeholder="Top text"
-                name="firstname"      
-                value={formData.firstname}
+                name="firstName"      
+                value={formData.firstName}
                 />
-                <input  className="formInput"
+
+                <input className="formInput"
                 type="text"
-                placeholder="Bottom text"
                 onChange={handleChange}
-                name="lastname"
+                placeholder="Bottom text"
+                name="lastName"
                 value={formData.lastName}
                 />
+
                 <button onClick={getRandomMeme} className="formButton">Get a new Meme</button>
             </div>
+
+                <div className="memeContainer">
                 <img src={url} alt="meme" className="memeImg"/>
+                <h1 className="meme-topText">{formData.firstName} </h1>
+                <h1 className="meme-bottomText">{formData.lastName}</h1>
+                
+                </div>
                 
         </div>
     )
