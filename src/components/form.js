@@ -1,5 +1,5 @@
-import dataObj from "../Data/memeData"
 import React from "react"
+// import dataObj from "../Data/memeData"
 
 export default function Form() {
 
@@ -8,10 +8,19 @@ export default function Form() {
     );
     console.log(formData);
     
-    const [url,setUrl] = React.useState("https://i.imgflip.com/30b1gx.jpg") 
+    const[randomNumber,setRandomNumber]= React.useState(0);
     
-    const memeFunc = dataObj()
-    const memeArray = memeFunc.data.memes 
+    const [url,setUrl] = React.useState("") 
+    
+        React.useEffect(()=>{
+            fetch(`https://api.imgflip.com/get_memes`)
+            .then(res => res.json())
+            .then(obj => setUrl(obj.data.memes[randomNumber].url))
+        },[randomNumber])
+
+
+    // const memeFunc = dataObj()
+    // const memeArray = memeFunc.data.memes 
     
     function handleChange(e){
         setFormData(prevFormData => {
@@ -25,9 +34,10 @@ export default function Form() {
 
 
     function getRandomMeme(){
-        const randNumber = Math.floor(Math.random() *memeArray.length);
-        console.log(randNumber);
-        setUrl(memeArray[randNumber].url);
+        const randNumber = Math.floor(Math.random() *99);
+        // console.log(randNumber);
+        setRandomNumber(randNumber);
+        // setUrl(memeArray[randomNumber].url);
     }
 
     return (
